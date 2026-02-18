@@ -1,0 +1,40 @@
+/* Evita scroll y fuerza layout a 100vh */
+html, body {
+  height: 100%;
+}
+
+.app-body {
+  min-height: 100vh;
+  overflow: hidden; /* <- clave para que no haya scroll */
+  background: linear-gradient(180deg, #0b1320 0%, #111827 100%);
+}
+
+/* Área central se ajusta entre navbar y footer */
+.content-fit {
+  height: calc(100vh - 56px - 44px); 
+  /* 56px aprox navbar bootstrap, 44px footer */
+}
+
+/* Ajuste del card body que contiene el canvas */
+.canvas-wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Canvas con look moderno */
+.canvas-box {
+  width: 100%;
+  height: 100%;
+  max-height: 420px; /* evita que crezca demasiado */
+  background: #f4f6f8;
+  border: 2px solid #3a2a10;
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(0,0,0,.35);
+}
+
+/* Footer fijo al fondo sin necesitar scroll */
+.footer-fit {
+  height: 44px;
+}
