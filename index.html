@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon" />
-  <title>Figuras básicas en Canvas 2D</title>
+  <title>Primitivas Canvas 2D</title>
 
   <!-- Bootstrap 5 -->
   <link
@@ -21,12 +20,12 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-warning-subtle">
     <div class="container">
       <a class="navbar-brand fw-semibold" href="#">
-        Canvas 2D <span class="badge text-bg-warning text-dark ms-2">Paths</span>
+        Canvas 2D <span class="badge text-bg-warning text-dark ms-2">Primitivas</span>
       </a>
     </div>
   </nav>
 
-  <!-- Contenido principal -->
+  <!-- Contenido -->
   <main class="container py-3 content-fit">
     <div class="row g-3 h-100">
 
@@ -35,7 +34,7 @@
         <div class="card shadow-sm h-100">
           <div class="card-body">
             <h5 class="card-title fw-bold">
-              Figuras y Paths en Canvas
+              Figuras básicas y Arcos
             </h5>
 
             <p class="card-text text-secondary">
@@ -43,14 +42,15 @@
             </p>
 
             <ul class="small text-secondary">
-              <li><code>fillRect()</code> → Rectángulo relleno</li>
-              <li><code>clearRect()</code> → Limpieza parcial</li>
-              <li><code>strokeRect()</code> → Contorno</li>
-              <li><code>beginPath()</code> + <code>lineTo()</code> → Triángulo</li>
+              <li><code>fillRect()</code></li>
+              <li><code>clearRect()</code></li>
+              <li><code>strokeRect()</code></li>
+              <li><code>beginPath()</code> + <code>lineTo()</code></li>
+              <li><code>arc()</code> → círculos y curvas</li>
             </ul>
 
             <div class="alert alert-warning mb-0 small">
-              Se combinan primitivas geométricas y trazado manual de paths.
+              Se combinan primitivas geométricas y trazado de arcos.
             </div>
           </div>
         </div>
@@ -60,7 +60,7 @@
       <div class="col-12 col-lg-8">
         <div class="card shadow-sm h-100">
           <div class="card-header d-flex justify-content-between align-items-center">
-            <span class="fw-semibold">Renderizado en tiempo real</span>
+            <span class="fw-semibold">Renderizado en Canvas</span>
             <button id="btnRedraw" class="btn btn-sm btn-dark">
               Redibujar
             </button>
@@ -71,7 +71,7 @@
           </div>
 
           <div class="card-footer text-secondary small">
-            Ejemplo combinado: Rectángulos + Triángulo (Path API).
+            Rectángulos + Triángulo + Figura con arc().
           </div>
         </div>
       </div>
