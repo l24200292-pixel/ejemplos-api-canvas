@@ -1,40 +1,44 @@
-/* Evita scroll y fuerza layout a 100vh */
-html, body {
-  height: 100%;
+.app-body{
+  height:100vh;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
 }
 
-.app-body {
-  min-height: 100vh;
-  overflow: hidden; /* <- clave para que no haya scroll */
-  background: linear-gradient(180deg, #0b1320 0%, #111827 100%);
+.navbar{ height:60px; }
+.footer-fit{ height:50px; }
+
+.content-fit{
+  flex:1;
+  display:flex;
+}
+.content-fit .row{ flex:1; }
+
+.canvas-wrap{
+  height:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:10px;
 }
 
-/* Área central se ajusta entre navbar y footer */
-.content-fit {
-  height: calc(100vh - 56px - 44px); 
-  /* 56px aprox navbar bootstrap, 44px footer */
+.canvas-box{
+  width:100%;
+  height:100%;
+  background:white;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,.35);
 }
 
-/* Ajuste del card body que contiene el canvas */
-.canvas-wrap {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.card{
+  border:none;
+  border-radius:18px;
+  backdrop-filter: blur(6px);
 }
 
-/* Canvas con look moderno */
-.canvas-box {
-  width: 100%;
-  height: 100%;
-  max-height: 420px; /* evita que crezca demasiado */
-  background: #f4f6f8;
-  border: 2px solid #3a2a10;
-  border-radius: 16px;
-  box-shadow: 0 12px 28px rgba(0,0,0,.35);
+.card-header{
+  background:transparent;
+  border-bottom:1px solid #e5e7eb;
 }
-
-/* Footer fijo al fondo sin necesitar scroll */
-.footer-fit {
-  height: 44px;
-}
+.card-footer{ background:transparent; }

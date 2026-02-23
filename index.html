@@ -2,76 +2,59 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Primitivas Canvas 2D</title>
 
-  <!-- Bootstrap 5 -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
-
-  <link rel="stylesheet" href="./assests/css/styles.css" />
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assests/css/styles.css">
 </head>
 
 <body class="app-body">
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-warning-subtle">
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-dark bg-dark border-bottom border-warning-subtle">
     <div class="container">
-      <a class="navbar-brand fw-semibold" href="#">
+      <span class="navbar-brand fw-semibold">
         Canvas 2D <span class="badge text-bg-warning text-dark ms-2">Primitivas</span>
-      </a>
+      </span>
     </div>
   </nav>
 
-  <!-- Contenido -->
+  <!-- CONTENIDO -->
   <main class="container py-3 content-fit">
     <div class="row g-3 h-100">
 
-      <!-- Card Descripción -->
+      <!-- CARD DESCRIPCIÓN -->
       <div class="col-12 col-lg-4">
-        <div class="card shadow-sm h-100">
+        <div class="card h-100">
           <div class="card-body">
-            <h5 class="card-title fw-bold">
-              Figuras básicas y Arcos
-            </h5>
-
-            <p class="card-text text-secondary">
-              Este ejemplo demuestra:
-            </p>
-
-            <ul class="small text-secondary">
-              <li><code>fillRect()</code></li>
-              <li><code>clearRect()</code></li>
-              <li><code>strokeRect()</code></li>
-              <li><code>beginPath()</code> + <code>lineTo()</code></li>
-              <li><code>arc()</code> → círculos y curvas</li>
+            <h5 class="fw-bold">Figuras básicas y arcos</h5>
+            <ul class="small">
+              <li>fillRect()</li>
+              <li>clearRect()</li>
+              <li>strokeRect()</li>
+              <li>lineTo()</li>
+              <li>arc()</li>
             </ul>
-
-            <div class="alert alert-warning mb-0 small">
-              Se combinan primitivas geométricas y trazado de arcos.
-            </div>
           </div>
         </div>
       </div>
 
-      <!-- Card Canvas -->
+      <!-- CARD CANVAS -->
       <div class="col-12 col-lg-8">
-        <div class="card shadow-sm h-100">
-          <div class="card-header d-flex justify-content-between align-items-center">
-            <span class="fw-semibold">Renderizado en Canvas</span>
-            <button id="btnRedraw" class="btn btn-sm btn-dark">
-              Redibujar
-            </button>
+        <div class="card h-100">
+          <div class="card-header d-flex justify-content-between">
+            <span>Renderizado Canvas</span>
+            <button id="btnRedraw" class="btn btn-dark btn-sm">Redibujar</button>
           </div>
 
           <div class="card-body canvas-wrap">
             <canvas id="canvas" class="canvas-box"></canvas>
           </div>
 
-          <div class="card-footer text-secondary small">
-            Rectángulos + Triángulo + Figura con arc().
+          <div class="card-footer small text-secondary">
+            Rectángulos + Triángulos + Carita + Corazón moderno + Grid de Arcos
           </div>
         </div>
       </div>
@@ -79,19 +62,10 @@
     </div>
   </main>
 
-  <!-- Footer -->
-  <footer class="footer-fit bg-dark text-light">
-    <div class="container d-flex justify-content-between align-items-center py-2">
-      <div class="small">
-        Programador: <span class="fw-semibold">ANAHI DIAZ ROSALES</span>
-      </div>
-      <div class="small text-secondary">
-        © <span id="year"></span> | Canvas + Bootstrap 5
-      </div>
-    </div>
+  <footer class="footer-fit bg-dark text-light text-center py-2">
+    ANAHI DIAZ ROSALES © <span id="year"></span>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="./assests/js/main.js"></script>
 </body>
 </html>
